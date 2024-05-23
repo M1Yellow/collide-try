@@ -6200,9 +6200,9 @@
         
         // canvas图层切换显示
         if (params && params.canvasEle) switchCanvasShow(params.canvasEle, isShow);
-        // 运动全路径
+        // 角色运动路径
         if (key === "isShowBallMovePath") togglePathBallMoveShow(isShow);
-        // 运动全路径
+        // 角色球体路径
         if (key === "isShowBallPath") togglePathBallShow(isShow);
         // 血量条切换显示
         if (key === "isShowRoleBloodLine") directPlayAgain(false);
@@ -6366,8 +6366,6 @@
     // 切换显示运动路径层画布
     function togglePathBallMoveShow(isShow) {
         switchCanvasShow(gamePathCanvas, isShow);
-        // 关闭主运动路径，球体路径一起关闭
-        if (!isShow) switchCanvasShow(gamePathBallCanvas, isShow);
     }
     
     
